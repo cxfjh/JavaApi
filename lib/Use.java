@@ -200,4 +200,65 @@ public class Use {
         for (int i = 0; i < count; i++) { set.add(result[i]); };
         return set.toArray(java.util.Arrays.copyOf(result, set.size()));
     };
+    
+
+
+
+
+    // -------------------------------------------------- 数组排序方法 --------------------------------------------------
+
+    /**
+     * 数组排序方法，根据数组元素的大小进行排序。
+     * 
+     * @param array 要排序的数组
+     * @param ascending 是否升序排序
+     * @return 排序后的数组
+     */
+    public static Integer[] sort(final Integer[] array, final boolean ascending) {
+        if (ascending) { Arrays.sort(array); }
+        else { Arrays.sort(array, (a, b) -> b - a); }
+        return array;
+    };
+
+
+    /**
+     * 数组排序方法，根据数组元素的大小进行排序。
+     * 
+     * @param array 要排序的数组
+     * @param ascending 是否升序排序
+     * @return 排序后的数组
+     */
+    public static String[] sort(final String[] array, final boolean ascending) {
+        if (ascending) { Arrays.sort(array); }
+        else { Arrays.sort(array, (a, b) -> b.compareTo(a)); }
+        return array;
+    };
+
+
+    /**
+     * 数组排序方法，根据数组元素的大小进行排序。
+     * 
+     * @param array 要排序的数组
+     * @param ascending 是否升序排序
+     * @return 排序后的数组
+     */
+    public static Double[] sort(final Double[] array, final boolean ascending) {
+        if (ascending) { Arrays.sort(array); }
+        else { Arrays.sort(array, (a, b) -> b.compareTo(a)); }
+        return array;
+    };
+
+
+
+
+
+    // -------------------------------------------------- 清空控制台 --------------------------------------------------
+
+    /**
+     * 该方法用于清空控制台屏幕。
+     */
+    public static void clear() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    };
 };
